@@ -1,6 +1,52 @@
-*{
+* {
   margin: 0;
   border: none;
   padding: 0;
   box-sizing: border-box;
-} 
+  font-family: "Ubuntu", sans-serif;
+}
+.user-card {
+  margin: 0 auto;
+  width: 550px;
+  text-align: center;
+}
+.user-card__name {
+  display: inline-block;
+  position: relative;
+  margin-top: 30px;
+  padding: 15px;
+  transition: all 600ms ease-in-out;
+  font-size: 30px;
+}
+.user-card__name::after,
+.user-card__name::before {
+  display: block;
+  position: absolute;
+  height: 0.1em;
+  content: "";
+  transition: all 0.5s ease-in;
+  background-color: rgb(90, 88, 88);
+}
+.user-card__name::after {
+  width: 0;
+  top: 80%;
+  left: 10%;
+}
+.user-card__name::before {
+  width: 0;
+  right: 10%;
+  bottom: 80%;
+}
+.user-card__name:hover {
+  border: 2px solid grey;
+  border-radius: 10px;
+  background-color: grey;
+  color: white;
+}
+.user-card__name:hover::after,
+.user-card__name:hover::before {
+  width: 80%;
+}
+.user-card__paragraph {
+  font-size: 17px;
+}
